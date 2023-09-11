@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Fasthand', cursive;
+    font-family: 'Roboto Mono', monospace;
+}
+.container{
+    background-color: rgb(221, 232, 241);
+    min-height: 100vh;
+    padding-top: 2rem;
+}
+#todo-container{
+    width: 40%;
+    max-height: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    margin:auto;
+    padding: 20px;
+    /* outline: 4px solid rgba(0,0,0,0.1); */
+    box-shadow: 0 0 4px 6px rgba(0,0,0,0.1);
+}
+input[type='button']{
+    /* To remove default style of button */
+    background-color: white;
+    border:none;
+    cursor: pointer;
+    color:lightslategrey;
+}
+.input-container{
+    width:100%;
+    border-radius: 5px;
+    background-color: rgba(211, 211, 211, 0.23);
+}
+.input-container>i{
+    margin-left: 15px;
+    font-size: 22px;
+}
+.input-container>input[type='text']{
+    padding:10px;
+    font-size: 20px;
+    border:none;
+    background-color: transparent;
+}
+input[type='text']:focus{
+    outline:none;
+}
+#todo-container>p{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-family: monospace;
+    font-size: 12px;
+    padding: 10px;
+}
+#todo-container>p>span>img{
+    width:22px;
+    color:lightslategrey;
+}
+#todo-container>p>span>span{
+    vertical-align:top;
+    font-size: 14px;
+
+    color:lightslategray;
+}
+#todos{
+    border: 1px solid lightgrey;
+    border-left: none;
+    border-right: none;
+    list-style-type: none;
+}
+#todos li{
+    padding:15px 8px;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+#todos li span input[type='radio']{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+
+}
+#todos li input[type='button']{
+    width: 27px;
+    height: 27px;
+    font-size: 14px;
+    font-weight: 900;
+    border-radius: 50%;
+    font-family: sans-serif;
+    color:white;
+    border: 3px solid white;
+    
+}
+#todos li input[type='button']:hover{
+    color:black;
+    border: 3px solid black;
+}
+#todos li input[type='button']:active{
+    scale: 1.1;
+}

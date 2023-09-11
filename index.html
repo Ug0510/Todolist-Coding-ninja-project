@@ -4,30 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todolist</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./styles.css">
+
 </head>
 <body>
 
     <div class="container">
         <div id="todo-container">
-            <input type="text" name="todo" placeholder="Type your todo list" id="todoInput">
+            <div class="input-container">
+                <i class="fa fa-list" aria-hidden="true"></i>
+                <input type="text" name="todo" placeholder="Type your todo list" id="todo-input">
+            </div>
             <p>
                 <span>
-                    <input type="button" value="" id="toggleTick">
-                    Complete all tasks
+                    <img src="./assests/icons/double-tick-indicator.png" alt="">
+                    <input type="button" value="" id="toggle-tick">
+                    <span>Complete all tasks</span>
                 </span>
                 <input type="button" value="Clear completed">
             </p>
             <ul id="todos">
                 <!-- sample todo -->
                 <li>
-                    <input type="radio">
-                    <span>Todo Content</span>
-                    <input type="button">
+                    <span>
+                        <input type="radio">
+                        <span>Todo Content</span>
+                    </span>
+                    <input type="button" value="X">
                 </li>
             </ul>
             <p>
-                <span><span id="todoCount">0</span>tasks left</span>
+                <span><span id="todoCount">0 </span><span>tasks left</span></span>
                 <span>
                     <input type="button" value="All" id="allbtn">
                     <input type="button" value="Uncompleted" id="uncomplete-btn">
