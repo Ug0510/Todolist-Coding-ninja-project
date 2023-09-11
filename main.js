@@ -16,7 +16,7 @@ function renderThisList(todosList)
                 <input type="checkbox" ${checkCompleted} onclick="toggleTodo(${i})">
                 <span class="${addedClass}" >${todosList[i].task}</span>
             </span>
-            <input type="button" value="X">
+            <input type="button" value="X" onclick="deleteTodo(${i})">
         </li>`;
             
             listHtml += li;
@@ -92,4 +92,11 @@ function filterTodos(num){
         renderThisList(todos.filter(todo => todo.isCompleted == true));
     }
 
+}
+
+// function to delete Todo 
+function deleteTodo(index)
+{
+    todos.splice(index,1);
+    renderList();
 }

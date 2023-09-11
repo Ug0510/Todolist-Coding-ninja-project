@@ -92,7 +92,10 @@ input[type='text']:focus{
     border: 3px solid white;
     
 }
-#todos li input[type='button']:hover{
+#todos li:hover{
+    background-color: rgba(211, 211, 211, 0.1);
+}
+#todos li:hover input[type='button']{
     color:black;
     border: 3px solid black;
 }
