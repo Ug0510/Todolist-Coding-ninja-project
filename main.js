@@ -100,3 +100,18 @@ function deleteTodo(index)
     todos.splice(index,1);
     renderList();
 }
+
+
+// function to delete all marked Todos
+function deleteMarked(){
+    let newTodo = [];
+    for(let i = 0; i < todos.length; i++)
+    {
+        if(todos[i].isCompleted == false)
+        {
+            newTodo.push(todos[i]);
+        }
+    }
+    todos = newTodo;
+    renderList();
+}
