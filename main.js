@@ -7,14 +7,14 @@ function renderList(){
     {
         let todoList = document.getElementById('todos');
         let listHtml = "";
-        for(let todo of todos)
+        for(let i = 0 ; i < todos.length; i++)
         {
-            let checkCompleted = todo.isCompleted? "checked" : "";
-            let addedClass = todo.isCompleted? "task-done" : "";
+            let checkCompleted = todos[i].isCompleted? "checked" : "";
+            let addedClass = todos[i].isCompleted? "task-done" : "";
             let li = `<li>
             <span>
-                <input type="checkbox" ${checkCompleted} onclick="markCompleted(event)">
-                <span class="${addedClass}" >${todo.task}</span>
+                <input type="checkbox" ${checkCompleted} onclick="toggleTodo('${i}')">
+                <span class="${addedClass}" >${todos[i].task}</span>
             </span>
             <input type="button" value="X">
         </li>`;
@@ -39,4 +39,13 @@ function handleKeyPress(event){
         renderList();
     }
 }
-console.log("All working");
+
+// toggle Task completion
+function toggleTodo(index)
+{
+    if(index >= 0 && index < todos.length)
+    {
+        todos[index].isCompleted = !todos[index].isCompleted;
+        renderList();
+    }
+}
