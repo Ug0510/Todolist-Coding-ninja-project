@@ -124,3 +124,47 @@ input[type='button']:hover{
 #todo-container>p:last-child>span:last-child>input:first-child{
 color:black;
 }
+@media screen and (max-width:970px) {
+    #todo-container>p{
+        flex-direction: column;
+        align-items: center;
+    }
+    #todo-container>.input-container>i{
+        font-size: 16px;
+    }
+    #todo-container>.input-container>input{
+        padding:10px;
+        font-size: 18px;
+    }
+    #todos li span{
+        font-size: 20px;
+    }
+    #todos li{
+        vertical-align: top;
+    }
+}
+@media screen and (max-width:823px) {
+    
+    #todo-container{
+        width:55%;
+    }
+}
+@media screen and (max-width:600px) {
+    
+    #todo-container{
+        width:70%;
+    }
+}
+@media screen and (max-width:470px) {
+    
+    #todo-container{
+        width:90%;
+    }
+    #todo-container>.input-container:first-child>input{
+        width: 100%;
+    }
+    #todo-container>.input-container:first-child>i{
+        display: none;
+    }
+    
+}
