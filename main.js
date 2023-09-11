@@ -5,10 +5,15 @@ let filterNum = 0;
 // function to render specific list which is passed as parameter
 function renderThisList(todosList)
 {
+    let leftTaskCount = 0;
     let todoListDOM = document.getElementById('todos');
         let listHtml = "";
         for(let i = 0 ; i < todosList.length; i++)
         {
+            if(todosList[i].isCompleted == false)
+            {
+                leftTaskCount++;
+            }
             let checkCompleted = todosList[i].isCompleted? "checked" : "";
             let addedClass = todosList[i].isCompleted? "task-done" : "";
             let li = `<li>
@@ -21,7 +26,12 @@ function renderThisList(todosList)
             
             listHtml += li;
         }
+        
+        // rendering all todos 
         todoListDOM.innerHTML = listHtml;
+
+        // setting up the task count left to be completed
+        document.getElementById('todoCount').innerText = leftTaskCount+" ";
 }
 // function to render the list
 function renderList(){
