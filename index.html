@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="todo-container">
+            <input type="text" name="todo" placeholder="Type your todo list" id="todoInput">
+            <p>
+                <span>
+                    <input type="button" value="" id="toggleTick">
+                    Complete all tasks
+                </span>
+                <input type="button" value="Clear completed">
+            </p>
+            <ul id="todos">
+                <!-- sample todo -->
+                <li>
+                    <input type="radio">
+                    <span>Todo Content</span>
+                    <input type="button">
+                </li>
+            </ul>
+            <p>
+                <span><span id="todoCount">0</span>tasks left</span>
+                <span>
+                    <input type="button" value="All" id="allbtn">
+                    <input type="button" value="Uncompleted" id="uncomplete-btn">
+                    <input type="button" value="Completed" id="complete-btn">
+                </span>
+            </p>
+        </div>
+    </div>
+    
+
+    <script src="./main.js"></script>
+</body>
+</html>
