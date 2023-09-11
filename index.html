@@ -41,9 +41,9 @@
             <p>
                 <span><span id="todoCount">0 </span><span>tasks left</span></span>
                 <span>
-                    <input type="button" value="All" >
-                    <input type="button" value="Uncompleted" id="uncomplete-btn">
-                    <input type="button" value="Completed" id="complete-btn">
+                    <input type="button" value="All" onclick="filterTodos(0)" id="btn0">
+                    <input type="button" value="Uncompleted" onclick="filterTodos(1)" id="btn1">
+                    <input type="button" value="Completed" onclick="filterTodos(2)" id="btn2">
                 </span>
             </p>
         </div>

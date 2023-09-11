@@ -1,27 +1,33 @@
 // array to store all todos
 let todos = [];
+let filterNum = 0;
 
-// function to render the list
-function renderList(){
-    if(todos.length != 0)
-    {
-        let todoList = document.getElementById('todos');
+// function to render specific list which is passed as parameter
+function renderThisList(todosList)
+{
+    let todoListDOM = document.getElementById('todos');
         let listHtml = "";
-        for(let i = 0 ; i < todos.length; i++)
+        for(let i = 0 ; i < todosList.length; i++)
         {
-            let checkCompleted = todos[i].isCompleted? "checked" : "";
-            let addedClass = todos[i].isCompleted? "task-done" : "";
+            let checkCompleted = todosList[i].isCompleted? "checked" : "";
+            let addedClass = todosList[i].isCompleted? "task-done" : "";
             let li = `<li>
             <span>
-                <input type="checkbox" ${checkCompleted} onclick="toggleTodo('${i}')">
-                <span class="${addedClass}" >${todos[i].task}</span>
+                <input type="checkbox" ${checkCompleted} onclick="toggleTodo(${i})">
+                <span class="${addedClass}" >${todosList[i].task}</span>
             </span>
             <input type="button" value="X">
         </li>`;
             
             listHtml += li;
         }
-        todoList.innerHTML = listHtml;
+        todoListDOM.innerHTML = listHtml;
+}
+// function to render the list
+function renderList(){
+    if(todos.length != 0)
+    {
+        renderThisList(todos);
     }
 }
 
@@ -58,4 +64,32 @@ function markAll()
         todos[i].isCompleted = true;
     }
     renderList();
+}
+
+// filter todos
+function filterTodos(num){
+
+    // initializing all buttons as grey
+    let btn;
+    for(let i = 0; i < 3; i++)
+    {
+        btn = document.getElementById('btn'+i);
+        btn.style.color = 'lightslategrey'
+    }
+    btn = document.getElementById('btn'+num);
+    btn.style.color = 'black';
+   
+    if(num === 0)
+    {
+        renderThisList(todos);
+    }
+    else if(num === 1)
+    {
+        renderThisList(todos.filter(todo => todo.isCompleted == false));
+    }
+    else if(num === 2)
+    {
+        renderThisList(todos.filter(todo => todo.isCompleted == true));
+    }
+
 }
