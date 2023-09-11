@@ -118,3 +118,6 @@ input[type='text']:focus{
 input[type='button']:hover{
     color:black;
 }
+#todo-container>p:last-child>span:last-child>input:first-child{
+color:black;
+}
