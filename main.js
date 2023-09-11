@@ -32,7 +32,7 @@ function handleKeyPress(event){
         let todoInput = document.getElementById('todo-input');
         let newEntry = {
             task: todoInput.value,
-            isCompleted: true
+            isCompleted: false
         };
         todoInput.value = "";
         todos.push(newEntry);
@@ -48,4 +48,14 @@ function toggleTodo(index)
         todos[index].isCompleted = !todos[index].isCompleted;
         renderList();
     }
+}
+
+// function to toggle all todos 
+function markAll()
+{
+    for(let i = 0; i < todos.length; i++)
+    {
+        todos[i].isCompleted = true;
+    }
+    renderList();
 }

@@ -21,27 +21,27 @@
                 <input type="text" name="todo" placeholder="Type your todo list" id="todo-input" onkeydown="handleKeyPress(event)">
             </div>
             <p>
-                <span>
+                <span id="toggle-tick" onclick="markAll()">
                     <img src="./assests/icons/double-tick-indicator.png" alt="">
-                    <input type="button" value="" id="toggle-tick">
+                    <input type="button" value="" >
                     <span>Complete all tasks</span>
                 </span>
                 <input type="button" value="Clear completed">
             </p>
             <ul id="todos">
                 <!-- sample todo -->
-                <li>
+                <!-- <li>
                     <span>
                         <input type="checkbox">
                         <span>Todo Content</span>
                     </span>
                     <input type="button" value="X">
-                </li>
+                </li> -->
             </ul>
             <p>
                 <span><span id="todoCount">0 </span><span>tasks left</span></span>
                 <span>
-                    <input type="button" value="All" id="allbtn">
+                    <input type="button" value="All" >
                     <input type="button" value="Uncompleted" id="uncomplete-btn">
                     <input type="button" value="Completed" id="complete-btn">
                 </span>
