@@ -75,7 +75,7 @@ input[type='text']:focus{
     display: flex;
     justify-content: space-between;
 }
-#todos li span input[type='radio']{
+#todos li span input[type='checkbox']{
     width: 22px;
     height: 22px;
     border-radius: 50%;
@@ -98,4 +98,7 @@ input[type='text']:focus{
 }
 #todos li input[type='button']:active{
     scale: 1.1;
+}
+.task-done{
+    text-decoration: line-through;
 }

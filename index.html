@@ -18,7 +18,7 @@
         <div id="todo-container">
             <div class="input-container">
                 <i class="fa fa-list" aria-hidden="true"></i>
-                <input type="text" name="todo" placeholder="Type your todo list" id="todo-input">
+                <input type="text" name="todo" placeholder="Type your todo list" id="todo-input" onkeydown="handleKeyPress(event)">
             </div>
             <p>
                 <span>
@@ -32,7 +32,7 @@
                 <!-- sample todo -->
                 <li>
                     <span>
-                        <input type="radio">
+                        <input type="checkbox">
                         <span>Todo Content</span>
                     </span>
                     <input type="button" value="X">
