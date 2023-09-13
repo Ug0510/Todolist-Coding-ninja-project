@@ -35,9 +35,15 @@ function renderThisList(todosList)
 }
 // function to render the list
 function renderList(){
+
     if(todos.length != 0)
     {
         renderThisList(todos);
+    }
+    else
+    {
+        document.getElementById('todos').innerHTML = "";
+        document.getElementById('todoCount').innerText = leftTaskCount+" ";
     }
 }
 
