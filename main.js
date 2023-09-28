@@ -1,6 +1,5 @@
 // array to store all todos
 let todos = [];
-let filterNum = 0;
 
 // function to render specific list which is passed as parameter
 function renderThisList(todosList)
