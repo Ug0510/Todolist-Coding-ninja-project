@@ -13,3 +13,7 @@ Todolist , Coding ninja project , skill Test , made using only html , css and va
 * View all Todos (by default)
 * View only completed Todos
 * View only incompleted Todos
+
+#### Project Explaining video 
+
+You can look it in here https://drive.google.com/file/d/1joeqGN9uFfrRVfj5U3bIsNYtX8yhU8qa/view?usp=drive_link
