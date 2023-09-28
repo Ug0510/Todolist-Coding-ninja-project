@@ -42,7 +42,7 @@ function renderList(){
     else
     {
         document.getElementById('todos').innerHTML = "";
-        document.getElementById('todoCount').innerText = leftTaskCount+" ";
+        document.getElementById('todoCount').innerText = "0 ";
     }
 }
 
